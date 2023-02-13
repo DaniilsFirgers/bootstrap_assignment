@@ -10,9 +10,31 @@
     />
     <title>Bootstrap examples</title>
   </head>
-  <body>
+  <body style="background-color: wheat">
+    <!-- NAVBAR -->
+    <!-- navbar with dark background -->
+    <nav class="navbar mb-3" style="background-color: darkcyan">
+      <!-- fixed width container-->
+      <div class="container">
+        <!-- Navbar Brand name -->
+        <a class="navbar-brand">Navbar Example</a>
+        <!-- flex   -->
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <!-- blue color button  -->
+          <button class="btn btn-primary" type="submit">Search</button>
+          <!-- links -->
+        </form>
+      </div>
+    </nav>
+
     <!-- set backgroung of the table to light grey -->
-    <div class="container bg-light">
+    <div class="container mb-5" style="background-color: darkseagreen">
       <!-- set the color of text to blue for the header row, center text horizontally -->
       <div class="row text-primary text-center">
         <!-- on small screen devices the columns will be split evenly, on big screen -> 1, 3, 4, 4 -->
@@ -42,6 +64,61 @@
         <div class="col-3 col-sm-4">Markovic</div>
         <div class="col-3 col-sm-4">Helsinki</div>
       </div>
+    </div>
+    <hr />
+    <!-- align quote in the center -->
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- quotes -->
+      <blockquote class="blockquote">
+        <p>Some cool quote here...</p>
+      </blockquote>
+      <!-- quote author -->
+      <figcaption class="blockquote-footer">
+        Someone famous in <cite title="Source Title">Some magazine</cite>
+      </figcaption>
+    </div>
+    <hr />
+    <div
+      class="container d-flex flex-row justify-content-center align-items-center"
+    >
+      I am not a muted text...
+      <small class="text-muted ms-3">But I am</small>
+    </div>
+    <hr />
+    <div class="container">
+      <!-- different types of buttons -->
+      <button type="button" class="btn btn-danger">Standard danger btn</button>
+      <button type="button" class="btn btn-outline-danger">
+        Outlined danger btn
+      </button>
+      <button type="button" class="btn btn-danger btn-lg">
+        Large danger btn
+      </button>
+      <button type="button" class="btn btn-danger btn-sm">
+        Small danger btn
+      </button>
+      <button type="button" class="btn btn-danger" disabled>
+        Standard danger btn disabled
+      </button>
+    </div>
+    <hr />
+    <!-- Form component that takes 50% of the screen width-->
+    <div class="container w-50">
+      <form>
+        <div class="mb-3">
+          <label for="emialInput" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="emialInput" />
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" />
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>

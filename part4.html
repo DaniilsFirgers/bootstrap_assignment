@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bootstrap examples part 4</title>
+    <style>
+      body {
+        position: relative;
+      }
+      .list-group {
+        position: sticky;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <!-- some comments -->
+  <body class="m-3">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action" href="#item-1"
+            >Test1</a
+          >
+          <a class="list-group-item list-group-item-action" href="#item-2"
+            >Test2</a
+          >
+          <a class="list-group-item list-group-item-action" href="#item-3"
+            >Test3</a
+          >
+          <a class="list-group-item list-group-item-action" href="#item-4"
+            >Test4</a
+          >
+          <a class="list-group-item list-group-item-action" href="#item-5"
+            >Test5</a
+          >
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#list-example"
+          data-bs-offset="50"
+          tabindex="0"
+        >
+          <div class="container bg-warning mt-5 pt-5 h-50">
+            <h2 id="item-1">Random text 1</h2>
+            <br />
+            <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis est et expedita distinctio
+            </p>
+          </div>
+          <div class="container bg-warning mt-5 pt-5 h-50">
+            <h2 id="item-2">Random text 2</h2>
+            <p>
+              Nam libero tempore, cum soluta nobis est eligendi optio cumque
+              nihil impedit quo minus id quod maxime placeat facere possimus,
+              omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+              autem quibusdam et aut officiis debitis aut rerum necessitatibus
+              saepe eveniet ut et voluptates repudiandae sint et molestiae non
+              recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut
+              aut reiciendis voluptatibus maiores alias consequatur aut
+              perferendis doloribus asperiores repellat
+            </p>
+          </div>
+          <div class="container bg-warning mt-5 pt-5 h-50">
+            <h2 id="item-3">Random text 3</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt.
+            </p>
+          </div>
+          <div class="container bg-warning mt-5 pt-5 h-50">
+            <h2 id="item-4">Random text 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          </div>
+          <div class="container bg-warning mt-5 pt-5 h-50">
+            <h2 id="item-5">Random text 5</h2>
+            <p>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+              consequatur? Quis autem vel eum iure reprehenderit qui in ea
+              voluptate velit esse quam nihil molestiae consequatur, vel illum
+              qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

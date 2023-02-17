@@ -14,8 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Bootstrap examples part 3</title>
   </head>
-  <body>
-    <ul class="nav nav-pills">
+  <!-- navbar with pills -->
+  <body class="text-bg-light">
+    <ul class="nav nav-pills text-bg-info">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Active</a>
       </li>
@@ -29,14 +30,120 @@
         <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
-    <!-- Popover -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="popover"
-      data-bs-content="This is a popover!"
-    >
-      Click me
-    </button>
+    <!-- Popover -> set 'data-bs-toggle' to 'popover'-->
+    <div class="d-flex justify-content-center m-5">
+      <h2 class="me-3">Click the button to open PopOver</h2>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="popover"
+        data-bs-content="I am a popover!"
+      >
+        Click me
+      </button>
+    </div>
+    <!-- use classes accordion and accordion-flush -->
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed text-bg-secondary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Lorem Ipsum #1
+          </button>
+        </h2>
+        <!-- target div to collapse -->
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <!-- inner accordion -->
+          <div class="accordion-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut
+            pulvinar ligula, eget pharetra elit. Proin sit amet ullamcorper
+            elit. Nulla sit amet condimentum mi. Mauris ultrices porta est. Cras
+            pharetra venenatis molestie. Aliquam eu diam tempor augue sodales
+            posuere. Curabitur dapibus leo vel metus ullamcorper aliquam.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed text-bg-success"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Lorem Ipsum #2
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Suspendisse ullamcorper mi et augue cursus, a cursus mi
+            pellentesque. Duis luctus lacus ac urna porttitor vehicula. Donec id
+            cursus lorem, in ultricies lectus. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed placerat laoreet lectus fermentum
+            molestie. Aliquam elementum felis eu velit vehicula, sit amet dictum
+            ligula suscipit.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed text-bg-warning"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            Lorem Ipsum #3
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Quisque rhoncus mi in odio dignissim, ac volutpat velit maximus.
+            Phasellus blandit nisi in porta malesuada. Ut vitae sapien sem.
+            Integer auctor neque elit, sit amet cursus ligula porta at. Quisque
+            et mollis magna, quis scelerisque lectus. Praesent vestibulum nunc
+            ultricies, maximus turpis vel, placerat urna. Quisque ultrices
+            tincidunt lorem, id porttitor erat euismod ut.
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<!-- Javascript to enable popup functionality -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var popoverTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="popover"]')
+    );
+
+    var popoverList = popoverTriggerList.map(function (element) {
+      return new bootstrap.Popover(element);
+    });
+  });
+</script>
